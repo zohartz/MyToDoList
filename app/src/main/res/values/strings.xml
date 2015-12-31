@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">MyToDoList</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello"> Hello</string>
+    <string name="tap">Tap to start</string>
+    <string name="title_activity_sign_in__manager">SignIn_Manager</string>
+    <string name="user">User Name</string>
+    <string name="password">Password</string>
+    <string name="signin">SIGN IN</string>
+    <string name="forgotpass">Forget Password?</string>
+    <string name="signup">Sign Up</string>
+    <string name="phone">Phone</string>
+    <string name="join">JOIN crate a new team</string>
+    <string name="TeamName">TEAM NAME</string>
+    <string name="waiting">WAITING TASKS</string>
+    <string name="all">ALL TASKS</string>
+    <string name="crateTask">CREATE A NEW TASK</string>
+    <string name="invate">Invate Members</string>
+    <string name="mailexamp">email@example.com</string>
+    <string name="member">Member</string>
+    <string name="done">DONE</string>
+    <string name="insertName">Insert team name</string>
+    <string name="creat">CREATE</string>
+    <string name="sort">SORT</string>
+    <string name="createnewteam">CREATE A NEW TEAM </string>
+    <string name="createteam">Create a new team</string>
+    <string name="chk">Cheak for new tasks every</string>
+    <string name="min">MINUTES</string>
+    <string name="manage">MANAGE TEAM</string>
+    <string name="email">EMAIL</string>
+    <string name="send">SEND</string>
+
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_manageteam">MANAGE TEAM</string>
+    <string name="title_activity_waiting_task">waitingTask</string>
+    <string name="title_activity_waiting">waiting</string>
+    <string name="title_activity_page_fragment">page_fragment</string>
+    <string name="title_activity_create_team">Create A New Team</string>
+    <string name="title_activity_setting">SETTING</string>
+    <string name="category">Category</string>
+    <string name="important">IMPORTANT</string>
+    <string name="normal">NORMAL</string>
+    <string name="location">Location</string>
+
+
+
+    <color name="pinki">#ff0055</color>
+    <string name="title_activity_tab">tab</string>
+    <string name="welcome">WELCOME</string>
+    <string name="title_activity_manage_team">ManageTeam</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="title_activity_manger_sign_in">Manger Sign In</string>
+    <string name="title_activity_create_atask">Create A Task</string>
+    <string name="title_activity_forgot_password">Forgot Password</string>
+
+</resources>

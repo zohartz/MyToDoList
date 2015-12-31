@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mygui.com.zohar.mytodolist.CreateTeam">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TeamName"
+        android:id="@+id/teamNameTV"
+        android:textSize="20dp"
+        android:layout_marginTop="33dp"
+        android:textColor="#7d7d61"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/invate"
+        android:layout_alignStart="@+id/invate" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/insertName"
+        android:textSize="20dp"
+        android:id="@+id/teamNameET"
+        android:background="#eff1e8"
+        android:autoText="true"
+        android:layout_below="@id/teamNameTV" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invate"
+        android:id="@+id/invate"
+        android:textSize="20dp"
+        android:layout_marginTop="32dp"
+        android:textColor="#7d7d61"
+        android:layout_below="@+id/teamNameET"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="@string/mailexamp"
+        android:textSize="20dp"
+        android:id="@+id/mailET"
+        android:background="#eff1e8"
+        android:autoText="true"
+        android:layout_below="@+id/invate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    < ImageButton
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@drawable/plus2"
+        android:id="@+id/B-add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/L1"
+        android:layout_below="@+id/invate" />
+
+
+
+
+    <ListView
+        android:id="@+id/L1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:background="#eff1e8"
+        android:layout_below="@+id/mailET"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button">
+
+    </ListView>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="@string/creat"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
+
+
+</RelativeLayout>

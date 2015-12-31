@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        android:id="@+id/textView2"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="#7d7d61" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/usernameET"
+        android:layout_below="@+id/textView2"
+        android:background="#eff1e8"
+        android:layout_weight="0.04" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/password"
+        android:id="@+id/passTV"
+        android:layout_below="@+id/usernameET"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="#7d7d61" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/passwordET"
+        android:layout_below="@+id/passTV"
+        android:background="#eff1e8"
+        android:layout_weight="0.04" />
+
+    <Button
+        android:layout_width="209dp"
+        android:layout_height="36dp"
+        android:id="@+id/signin"
+        android:text="@string/signin"
+        android:onClick="SignIn"
+        android:layout_below="@+id/passwordET"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="61dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgot"
+        android:text="@string/forgotpass"
+        android:onClick="forgotPass"
+        android:layout_below="@+id/signin"
+        android:layout_alignRight="@+id/passTV"
+        android:layout_alignEnd="@+id/passTV"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/createteam"
+        android:onClick="createTeam"
+        android:text="@string/createteam"
+        android:textColor="#ff0055"
+        android:layout_marginTop="40dp"
+        android:textSize="22dp"
+        android:textIsSelectable="true"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+
+
+
+</LinearLayout>
