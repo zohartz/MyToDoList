@@ -31,6 +31,7 @@
     <string name="manage">MANAGE TEAM</string>
     <string name="email">EMAIL</string>
     <string name="send">SEND</string>
+  <string name="createmngr"> Create A New Manager Account</string>
 
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_menu">Menu</string>

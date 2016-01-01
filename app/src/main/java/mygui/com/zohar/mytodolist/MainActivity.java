@@ -2,8 +2,12 @@ package mygui.com.zohar.mytodolist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +15,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("TKT", "here ");
+
+
+
+    }
+
+    public void startTap(View view){
+
     }
 
     @Override

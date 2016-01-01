@@ -55,15 +55,6 @@
         android:layout_alignRight="@+id/button"
         android:layout_alignEnd="@+id/button" />
 
-    < ImageButton
-        android:layout_width="50dp"
-        android:layout_height="10dp"
-        android:background="@drawable/plus2"
-        android:id="@+id/B-add"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/L1"
-        android:layout_below="@+id/invate" />
 
 
 
