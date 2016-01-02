@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        android:id="@+id/textView2"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="#ff0055"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/usernameET"
+        android:layout_below="@+id/textView2"
+        android:background="#eff1e8"
+        android:layout_weight="0.08" />
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/password"
+        android:id="@+id/passTV"
+        android:layout_below="@+id/usernameET"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="#ff0055"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/passwordET"
+        android:layout_below="@+id/passTV"
+        android:background="#eff1e8"
+        android:layout_weight="0.12" />
+
+
+    <TextView
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/phone"
+        android:id="@+id/phoneTV"
+        android:layout_below="@+id/passwordET"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="#ff0055"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/phoneET"
+        android:layout_below="@+id/passTV"
+        android:background="#eff1e8"
+        android:layout_weight="0.08" />
+
+
+
+    <Button
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/phoneET"
+        android:layout_marginTop="61dp"
+        android:background="@drawable/shape"
+
+        android:id="@+id/sendBTN" />
+
+
+</LinearLayout>

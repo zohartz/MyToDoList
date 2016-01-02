@@ -1,28 +1,28 @@
 package mygui.com.zohar.mytodolist;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
-public class MangerSignIn extends AppCompatActivity {
+import com.parse.ParseUser;
+
+public class Tasks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manger_sign_in);
+        setContentView(R.layout.activity_tasks);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_manger_sign_in, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
-
-    public void SignIn(View view){
-
     }
 
     @Override
@@ -35,8 +35,17 @@ public class MangerSignIn extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == R.id.action_logout) {
+            ParseUser.logOut();
+            invalidateOptionsMenu();
+            Toast.makeText(getApplicationContext(), "Disconnected...", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Tasks.this, SignIn.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            Tasks.this.startActivity(intent);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -57,5 +57,11 @@
     <string name="title_activity_manger_sign_in">Manger Sign In</string>
     <string name="title_activity_create_atask">Create A Task</string>
     <string name="title_activity_forgot_password">Forgot Password</string>
+    <string name="title_activity_dispatch">DispatchActivity</string>
+    <string name="title_activity_tasks">Tasks</string>
+    <string name="logout">Log Out</string>
+
+    <!--<string name="parse_client_id"></string>-->
+    <!--<string name="parse_app_id"></string>-->
 
 </resources>
