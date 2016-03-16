@@ -1,10 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mygui.com.zohar.mytodolist.CreateATask">
+    tools:context="mygui.com.zohar.mytodolist.CreateATask"
+    >
 
     <TextView android:text="@string/category"
         android:layout_width="wrap_content"
@@ -14,8 +15,7 @@
         android:textSize="20dp"
 
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="match_parent"
@@ -25,37 +25,37 @@
         android:background="#eff1e8"
         android:autoText="true"
         android:layout_below="@+id/categoryTv"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/important"
-        android:id="@+id/radioButton"
+        android:id="@+id/imp"
         android:textColor="#ff8533"
-
+        android:onClick="onRadioButtonClicked"
         android:textSize="20dp"
+        android:textStyle="bold"
         android:layout_below="@+id/categoryET"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:textStyle="bold" />
+        android:layout_marginTop="36dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/normal"
-        android:id="@+id/radioButton2"
+        android:id="@+id/normal"
         android:textColor="#ff0055"
 
         android:checked="false"
         android:textSize="20dp"
-        android:layout_alignTop="@+id/radioButton"
-        android:layout_toRightOf="@+id/locationTV"
-        android:layout_toEndOf="@+id/locationTV"
         android:textStyle="bold"
-        android:theme="@android:style/Holo.Light.ButtonBar" />
+        android:theme="@android:style/Holo.Light.ButtonBar"
+        android:layout_alignTop="@+id/imp"
+        android:layout_alignRight="@+id/categoryET"
+        android:layout_alignEnd="@+id/categoryET" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,45 +64,121 @@
         android:id="@+id/locationTV"
         android:textSize="20dp"
         android:textColor="#7d7d61"
+        android:layout_below="@+id/imp"
+        android:layout_toRightOf="@+id/imp"
+        android:layout_toEndOf="@+id/imp" />
 
-        android:layout_below="@+id/radioButton"
-        android:layout_alignLeft="@+id/categoryTv"
-        android:layout_alignStart="@+id/categoryTv" />
+    <!-->
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton" />
+        <-->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textSize="20dp"
-        android:id="@+id/teamNameET"
+        android:id="@+id/locationET"
         android:background="#eff1e8"
         android:autoText="true"
+        android:maxHeight="10dp"
         android:layout_below="@+id/locationTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:maxHeight="10dp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <CalendarView
+
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/calendarView"
-        android:layout_below="@+id/teamNameET"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/teamNameET"
-        android:layout_alignEnd="@+id/teamNameET" />
+        android:hint="@string/dueDate"
+        android:id="@+id/dateTV"
+        android:textSize="20dp"
+        android:textColor="#7d7d61"
+
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/normal"
+        android:layout_alignEnd="@+id/normal"
+        android:layout_toRightOf="@+id/categoryTv"
+        android:layout_toEndOf="@+id/categoryTv" />
+
+    <!-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateView"
+            android:textSize="20dp"
+            android:textColor="#7d7d61"
+            android:layout_below="@+id/dateTV"
+            android:layout_alignLeft="@+id/crtBT"
+            android:layout_alignStart="@+id/crtBT"
+            android:layout_alignRight="@+id/crtBT"
+            android:layout_alignEnd="@+id/crtBT"
+            android:background="#eff1e8"
+            />
+    <-->
 
     <MultiAutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Assign"
-        android:id="@+id/multiAutoCompleteTextView"
-        android:layout_below="@+id/calendarView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:hint="Assign"
+        android:id="@+id/des"
         android:scrollbarSize="@dimen/activity_horizontal_margin"
-        android:layout_alignRight="@+id/calendarView"
-        android:layout_alignEnd="@+id/calendarView"
-        android:shadowColor="#e6e6e6" />
+        android:shadowColor="#e6e6e6"
+        android:layout_above="@+id/spinner2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/crtBT"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <!-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:id="@+id/teamNameET"
+        android:hint="teamN"
+        android:background="#eff1e8"
+        android:autoText="true"
+        android:maxHeight="10dp"
+        android:layout_above="@+id/crtBT"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:layout_below="@+id/teamNameET"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/teamNameET"
+            android:layout_alignEnd="@+id/teamNameET"
+
+            />
+
+
+        <DatePicker
+            //android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker" />
+        <-->
+
+
 
     <Button
         android:layout_width="200dp"
@@ -112,8 +188,36 @@
         android:background="@drawable/shape"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
+        android:id="@+id/crtBT"
+        android:onClick="createTask"
+        />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/dateTV"
+        android:layout_alignRight="@+id/locationTV"
+        android:layout_alignEnd="@+id/locationTV"
+        android:layout_alignTop="@+id/dateTV">
+        <RadioButton android:id="@+id/tmw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomorrow"
+            android:onClick="onRadioButtonClicked2"
+            android:layout_alignTop="@+id/dateTV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:onClick="onRadioButtonClicked2"
+            android:layout_alignTop="@+id/tmw"
+            android:layout_alignLeft="@+id/crtBT"
+            android:layout_alignStart="@+id/crtBT" />
+    </RadioGroup>
 
 
-
-</RelativeLayout>
+</RelativeLayout >

@@ -64,7 +64,8 @@ public class CreateTeam extends AppCompatActivity {
             public void onClick(View v) {
                 if (createTeamBtn.getText().toString() == getString(R.string.done)) {
                     if (CreateTeam.this.isEmpty(teamName)) {
-                        Toast.makeText(CreateTeam.this, "There is no data.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(CreateTeam.this, "There is no data.",
+                                Toast.LENGTH_LONG).show();
                     } else {
                         ParseUser curUser = ParseUser.getCurrentUser();
                         curUser.put("Team", teamName.getText().toString());

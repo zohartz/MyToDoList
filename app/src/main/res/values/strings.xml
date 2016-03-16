@@ -62,6 +62,12 @@
     <string name="title_activity_tasks">Tasks</string>
     <string name="logout">Log Out</string>
 
+    <string-array name="tabs">
+        <item>Waiting Tasks</item>
+        <item>All Tasks</item>
+    </string-array>
+
+    <string name="dueDate">Due Date</string>
     <!--<string name="parse_client_id"></string>-->
     <!--<string name="parse_app_id"></string>-->
 
