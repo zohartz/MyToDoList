@@ -12,7 +12,7 @@
         android:text="@string/TeamName"
         android:id="@+id/teamNameTV"
         android:textSize="20dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="0dp"
         android:textColor="#7d7d61"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/invate"
@@ -36,51 +36,80 @@
         android:text="@string/invate"
         android:id="@+id/invate"
         android:textSize="20dp"
-        android:layout_marginTop="32dp"
         android:textColor="#7d7d61"
         android:layout_below="@+id/teamNameET"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:hint="@string/mailexamp"
         android:textSize="20dp"
-        android:id="@+id/mailET"
+        android:id="@+id/newMemberMailET"
         android:background="#eff1e8"
         android:autoText="true"
         android:layout_below="@+id/invate"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_toLeftOf="@+id/addMemberBTN"
+        android:layout_toStartOf="@+id/addMemberBTN" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="@string/phoneExp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:id="@+id/newMemberPhoneET"
+        android:background="#eff1e8"
+        android:autoText="true"
+        android:layout_below="@+id/newMemberMailET"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/addMemberBTN"
+        android:layout_toLeftOf="@+id/addMemberBTN" />
 
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/addMemberBTN"
+        android:layout_below="@+id/invate"
+        android:layout_toRightOf="@+id/mailET"
+        android:layout_alignRight="@+id/L1"
+        android:layout_alignEnd="@+id/L1"
+        android:layout_above="@+id/L1" />
 
 
     <ListView
         android:id="@+id/L1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="19dp"
         android:background="#eff1e8"
-        android:layout_below="@+id/mailET"
+        android:layout_below="@+id/newMemberPhoneET"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button">
+        android:layout_above="@+id/createTeamBTN">
 
     </ListView>
 
     <Button
         android:layout_width="200dp"
         android:layout_height="30dp"
+        android:layout_marginTop="10dp"
         android:text="@string/creat"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
+        android:id="@+id/createTeamBTN" />
+
+
+
+
 
 
 </RelativeLayout>

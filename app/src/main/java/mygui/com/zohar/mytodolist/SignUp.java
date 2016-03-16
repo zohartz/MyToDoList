@@ -17,6 +17,7 @@ import com.parse.SignUpCallback;
 public class SignUp extends AppCompatActivity {
     private EditText usernameView;
     private  EditText passWordView;
+    private EditText emailView;
     private EditText phoneView;
 
     @Override
@@ -26,6 +27,7 @@ public class SignUp extends AppCompatActivity {
 
         usernameView = (EditText) findViewById(R.id.usernameET);
         passWordView = (EditText) findViewById(R.id.passwordET);
+        emailView = (EditText) findViewById(R.id.emailET);
         phoneView = (EditText) findViewById(R.id.phoneET);
 
         findViewById(R.id.sendBTN).setOnClickListener(new View.OnClickListener() {
@@ -45,6 +47,10 @@ public class SignUp extends AppCompatActivity {
                     validationError = true;
                     validationErrorMsg.append("enter a phone#");
                 }
+                if (SignUp.this.isEmpty(emailView)) {
+                    validationError = true;
+                    validationErrorMsg.append("enter a email#");
+                }
                 validationErrorMsg.append(".");
 
                 if (validationError) {
@@ -59,10 +65,11 @@ public class SignUp extends AppCompatActivity {
                 dig.show();
 
                 ParseUser user = new ParseUser();
-                user.setEmail(usernameView.getText().toString());
+                user.setEmail(emailView.getText().toString());
                 user.setPassword(passWordView.getText().toString());
                 user.setUsername(usernameView.getText().toString());
                 user.put("phone",phoneView.getText().toString());
+                user.put("type","mng");
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {

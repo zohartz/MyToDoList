@@ -30,6 +30,7 @@
     <string name="min">MINUTES</string>
     <string name="manage">MANAGE TEAM</string>
     <string name="email">EMAIL</string>
+    <string name="phoneExp">05X-xxxxxxx</string>
     <string name="send">SEND</string>
   <string name="createmngr"> Create A New Manager Account</string>
 
